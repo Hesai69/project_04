@@ -6,7 +6,7 @@ const app = express();
 const favicon = require('serve-favicon');
 
 const mongoose = require('mongoose');
-const url = process.ENV.MONGODB_URI || 'mongodb://localhost:27017/fitness';
+const url = process.env.MONGODB_URI || 'mongodb://localhost:27017/fitness';
 mongoose.connect(url);
 
 const routes = require('./config/routes');
@@ -20,4 +20,4 @@ app.use(favicon(__dirname + '/public/fiticon.ico'));
 
 app.use('/api', routes);
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
