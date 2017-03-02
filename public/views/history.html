@@ -1,0 +1,13 @@
+<section>
+  <ul>
+    <li ng-repeat="exercise in exerciseSelf.workout track by $index">
+      <div class="date container">
+        <p class="date"> {{ exercise.date }} </p>
+        <p class="date exercise"> {{exercise.name}} </p>
+      </div>
+      <p ng-repeat="set in exercise.sets">
+        <span>Set: {{$index+1}} Repetitions: {{set.repetitions}} Weight: {{set.weight}} </span>
+      </p>
+    </li>
+  </ul>
+</section>

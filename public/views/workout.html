@@ -1,0 +1,28 @@
+<form class="pure-form" ng-submit="exerciseSelf.addExercise()">
+  <input type="text" placeholder="exercise" ng-model="exerciseSelf.name">
+  <input type="number" placeholder="reps" ng-model="exerciseSelf.reps">
+  <input type="number" inputmode="numeric" placeholder="weight" ng-model="exerciseSelf.weight">
+  <input type="submit" class="pure-button pure-button-primary" value="Add">
+</form>
+
+<section class="workout">
+  <ul>
+    <li ng-repeat="set in exerciseSelf.newExercise.sets track by $index">
+      Exercise: {{exerciseSelf.newExercise.name}} Repetitions: {{set.repetitions}} <span ng-if="set.weight!==undefined">Weight: {{set.weight}}</span>
+    </li>
+  </ul>
+  <button class="save {{exerciseSelf.newExercise.sets.length>0}} pure-button pure-button-primary" ng-click="exerciseSelf.createExercise()">SAVE</button>
+</section>
+
+<section>
+  <ul>
+    <li ng-repeat="exercise in exerciseSelf.current track by $index">
+      <p>
+        Exercise: {{exercise.name}}
+      </p>
+      <p ng-repeat="set in exercise.sets">
+        <span>Set: {{$index+1}} Repetitions: {{set.repetitions}}</span> <span ng-if="set.weight!==undefined">Weight: {{set.weight}}</span>
+      </p>
+    </li>
+  </ul>
+</section>

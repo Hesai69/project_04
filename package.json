@@ -1,0 +1,30 @@
+{
+  "name": "project_04",
+  "version": "1.0.0",
+  "description": "### Overview",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.0",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.15.0",
+    "method-override": "^2.3.7",
+    "mongodb": "^2.2.24",
+    "mongoose": "^4.8.5",
+    "morgan": "^1.8.1",
+    "serve-favicon": "^2.4.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hesai69/project_04.git"
+  },
+  "author": "Qian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hesai69/project_04/issues"
+  },
+  "homepage": "https://github.com/Hesai69/project_04#readme"
+}
