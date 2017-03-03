@@ -4,18 +4,11 @@ body {
 .date {
   font-weight: bold;
 }
-/*.date {
-  text-align: left;
-  font-weight: bold;
-  float: left;
-}
-.date.exercise {
-  text-align: right;
-  float: right;
-}*/
+
 .save.false {
   display: none;
 }
 li {
   list-style: none;
 }
+

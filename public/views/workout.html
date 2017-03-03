@@ -13,8 +13,11 @@
   </ul>
   <button class="save {{exerciseSelf.newExercise.sets.length>0}} pure-button pure-button-primary" ng-click="exerciseSelf.createExercise()">SAVE</button>
 </section>
-
+<br />
 <section>
+  <div>
+    <button class="pure-button" ng-if="exerciseSelf.current.length" ng-click="exerciseSelf.clearCurrent()">Clear</button>
+  </div>
   <ul>
     <li ng-repeat="exercise in exerciseSelf.current track by $index">
       <p>

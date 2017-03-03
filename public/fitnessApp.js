@@ -9,11 +9,7 @@
     // Routes
     $stateProvider.state('workout', {
       url: '/',
-      templateUrl: 'views/workout.html'
-    })
-    .state('planner', {
-      url: '/planner',
-      templateUrl: 'views/planner.html'
+      templateUrl: 'views/workout.html',
     })
     .state('history', {
       url: '/history',

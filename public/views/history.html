@@ -1,9 +1,11 @@
 <section>
   <ul>
-    <li ng-repeat="exercise in exerciseSelf.workout track by $index">
+    <li ng-repeat="exercise in exerciseSelf.array track by $index">
       <div class="date container">
-        <p class="date"> {{ exercise.date }} </p>
-        <p class="date exercise"> {{exercise.name}} </p>
+        <span class="date"> {{ exercise.date }} </span>
+        <span class="date exercise"> {{exercise.name}}
+          <button class="pure-button" ng-click="exerciseSelf.removeExercise(exercise)">X</button>
+        </span>
       </div>
       <p ng-repeat="set in exercise.sets">
         <span>Set: {{$index+1}} Repetitions: {{set.repetitions}} Weight: {{set.weight}} </span>
